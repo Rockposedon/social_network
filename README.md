@@ -24,40 +24,43 @@ You can install these dependencies using `pip install -r requirements.txt`.
 Clone the repository to your local machine using the following command:
 ```bash
 git clone https://github.com/your-username/social-network-api.git
-cd social-network-api
+cd social-network-api```
+
 **2️⃣ Set up virtual environment**
 Create and activate a virtual environment for the project:
 
-bash
-Copy code
+```bash
+
 python3 -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
+source venv/bin/activate  # On Windows, use venv\Scripts\activate```
+
 **3️⃣ Install dependencies**
 Install required dependencies:
 
-bash
-Copy code
-pip install -r requirements.txt
+```bash
+
+pip install -r requirements.txt```
+
 **4️⃣ Set up environment variables**
 Create a .env file in the project root directory and add the following environment variables:
 
 makefile
-Copy code
+
 SECRET_KEY=your-secret-key
 DEBUG=True
 DATABASE_URL=your-database-url
 **5️⃣ Apply migrations**
 Apply database migrations:
 
-bash
-Copy code
-python manage.py migrate
+```bash
+
+python manage.py migrate```
 **6️⃣ Run the development server**
 Start the development server:
 
-bash
-Copy code
-python manage.py runserver
+```bash
+
+python manage.py runserver```
 The API will be accessible at http://localhost:8000/.
 
 **API Endpoints
@@ -77,12 +80,12 @@ You can also run the application using Docker:
 Build the Docker image:
 
 bash
-Copy code
+
 docker-compose build
 Run the Docker container:
 
 bash
-Copy code
+
 docker-compose up
 The API will be accessible at http://localhost:8000/.
 
