@@ -21,6 +21,7 @@ You can install these dependencies using `pip install -r requirements.txt`.
 ## Installation
 
 **1️⃣ Clone the repository**  
+
 Clone the repository to your local machine using the following command:
 
 ```
@@ -32,11 +33,15 @@ cd social-network-api
 
 Create and activate a virtual environment for the project:
 
+#### For Linux/Ubuntu, use
 ```
 python3 -m venv venv
 source venv/bin/activate  
+```
+#### For Windows, use 
 
-# On Windows, use 
+```
+python3 -m venv venv
 venv\Scripts\activate 
 ```
 
@@ -87,12 +92,11 @@ Build the Docker image:
 docker-compose build
 ```
 Run the Docker container:
-
-bash
 ```
 docker-compose up
-The API will be accessible at http://localhost:8000/.
 ```
+The API will be accessible at http://localhost:8000/.
+
 **Contributing**
 ```Fork the repository.
 Create a new branch (git checkout -b feature/your-feature-name).
