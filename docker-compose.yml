@@ -1,6 +1,17 @@
-version: '3'
+version: '3.8'
 
 services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: social_network_db
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"  # Ensure this port is not in use
+
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
@@ -8,6 +19,8 @@ services:
       - .:/code
     ports:
       - "8000:8000"
-    environment:
-      - PYTHONDONTWRITEBYTECODE=1
-      - PYTHONUNBUFFERED=1
+    depends_on:
+      - db
+
+volumes:
+  db_data:
