@@ -64,7 +64,7 @@ venv\Scripts\activate
 ```
 pip install -r requirements.txt
 ```
-Run the command and follow the prompts to create a superuser:
+Run the command and follow the prompts to create a superuser(Initially hit requests with superuser credentials in Postman):
 ```
 python manage.py createsuperuser
 ```
