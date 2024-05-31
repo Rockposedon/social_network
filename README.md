@@ -25,8 +25,8 @@ You can install these dependencies using `pip install -r requirements.txt`.
 Clone the repository to your local machine using the following command:
 
 ```
-git clone https://github.com/your-username/social-network-api.git
-cd social-network-api
+git clone https://github.com/rockposedon/social_network.git
+cd social_network
 ```
 
 **2️⃣ Set up virtual environment**
