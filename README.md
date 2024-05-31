@@ -29,38 +29,34 @@ cd social-network-api
 ```
 
 **2️⃣ Set up virtual environment**
+
 Create and activate a virtual environment for the project:
 
 ```
 python3 -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate 
+source venv/bin/activate  
+
+# On Windows, use 
+venv\Scripts\activate 
 ```
 
 **3️⃣ Install dependencies**
+
 Install required dependencies:
 
 ```
 pip install -r requirements.txt
 ```
 
-**4️⃣ Set up environment variables**
 
-Create a .env file in the project root directory and add the following environment variables:
-```
-makefile
-SECRET_KEY=your-secret-key
-DEBUG=True
-DATABASE_URL=your-database-url
-```
-
-**5️⃣ Apply migrations**
+**4️⃣ Apply migrations**
 
 Apply database migrations:
 
 ```
 python manage.py migrate
 ```
-**6️⃣ Run the development server**
+**5️⃣ Run the development server**
 
 Start the development server:
 
@@ -69,7 +65,7 @@ python manage.py runserver
 ```
 The API will be accessible at http://localhost:8000/.
 
-**API Endpoints**
+**6️⃣ API Endpoints**
 ```
 User Authentication:
 /api/signup/: User signup endpoint.
