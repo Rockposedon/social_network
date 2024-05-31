@@ -18,57 +18,68 @@
 
 You can install these dependencies using `pip install -r requirements.txt`.
 
+
+### Steps to Create `social_network_db` Database in MySQL
+
+1. **Access MySQL:**
+
+   Open a terminal or command prompt and log in to MySQL with the root user or a user with sufficient privileges to create databases:
+   ```bash
+   mysql -u root -p
+   ```
+
+2. **Create Database:**
+
+   Once you are logged in to MySQL, you can create the `social_network_db` database using the following command:
+   ```sql
+   CREATE DATABASE social_network_db;
+   ```
+
+
 ## Installation
 
 **1️⃣ Clone the repository**  
 
-Clone the repository to your local machine using the following command:
 
 ```
 git clone https://github.com/rockposedon/social_network.git
 cd social_network
 ```
 
-**2️⃣ Set up virtual environment**
-
-Create and activate a virtual environment for the project:
+**2️⃣ Activate virtual environment**
 
 #### For Linux/Ubuntu, use
 ```
-python3 -m venv venv
 source venv/bin/activate  
 ```
 #### For Windows, use 
 
 ```
-python3 -m venv venv
 venv\Scripts\activate 
 ```
 
-**3️⃣ Install dependencies**
+**3️⃣ Install required dependencies:**
 
-Install required dependencies:
 
 ```
 pip install -r requirements.txt
 ```
+Run the command and follow the prompts to create a superuser:
+```
+python manage.py createsuperuser
+```
 
-
-**4️⃣ Apply migrations**
-
-Apply database migrations:
+**4️⃣ Apply database migrations**
 
 ```
 python manage.py migrate
 ```
 **5️⃣ Run the development server**
 
-Start the development server:
-
 ```
 python manage.py runserver
 ```
-The API will be accessible at http://localhost:8000/.
+The API will be accessible at http://localhost:8000/
 
 **6️⃣ API Endpoints**
 ```
@@ -83,28 +94,22 @@ User Management:
 /api/friends/: List friends.
 /api/pending-requests/: List pending friend requests.
 ```
+The Signup API will be accessible at http://localhost:8000/api/signup/
+
 **Docker**
 
-You can also run the application using Docker:
+Run Docker Compose to build and start the containers:
+```
+docker-compose up --build
+```
+The API will be accessible at http://localhost:8000/
 
-Build the Docker image:
-```
-docker-compose build
-```
-Run the Docker container:
-```
-docker-compose up
-```
-The API will be accessible at http://localhost:8000/.
+### Contributing
 
-**Contributing**
-```Fork the repository.
-Create a new branch (git checkout -b feature/your-feature-name).
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature/your-feature-name).
-Create a new Pull Request.
-```
-License
-```
-This project is licensed under the MIT License - see the LICENSE file for details.
-```
+Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
